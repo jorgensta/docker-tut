@@ -11,6 +11,9 @@ class App extends Component {
           <p>
             Im editing this<code>src/App.js</code> and save to reload HEY DOCKER, this is insane.
           </p>
+          <p>
+            This is the new feature that i have, its really cool
+          </p>
           <a
             className="App-link"
             href="https://reactjs.org"
