@@ -8,3 +8,20 @@ before_install:
 
 script:
   - docker run jorgensta/docker-tut yarn test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region:  "us-east-2"
+  app: "docker-tut"
+  env: "DockerTut-env"
+  bucket_name: "elasticbeanstalk-us-east-2-625481587165"
+  bucket_path: "docker-tut"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secrect_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+
+
+
